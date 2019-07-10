@@ -59,7 +59,7 @@ document.onkeydown=function(event){
 
 if (letters===letterToGuess) {
 
-document.querySelector("wins").innerHTML=wins;
+document.querySelector("wins").innerHTML=wins++;
     
 }
 
