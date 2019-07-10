@@ -60,11 +60,17 @@ document.onkeydown=function(event){
 if (letters===letterToGuess) {
 
 document.querySelector("wins").innerHTML=wins++;
+
+//This If conditional Runs with we guess the correct letter, so we get a point for winning.
+//Just like line 52 (guessesLeft--), take one away from 9, we want to do something similar but add 1 too wins
+wins++;
+
+//call reset function
     
 }
 
 else (letters!==letterToGuess) {
 
-document.querySelector("losses".innerHTML=losses);
+    document.querySelector("losses").innerHTML=losses++;
 
 }
