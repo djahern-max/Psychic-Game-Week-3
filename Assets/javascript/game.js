@@ -28,11 +28,11 @@ document.getElementById("Computer's Guess").innerHTML = letterToGuess;
 document.onkeydown=function(event) {
 
 var key_press = String.fromCharCode(event.keyCode);
-guessesLeft--;
+
 
 document.getElementById("Player's Guess").innerHTML = key_press; 
 
-}
+
 
 
 //Keep track of the game-player's guesses
@@ -58,7 +58,7 @@ document.getElementById("wins").innerHTML = wins;
 
 }
 
-
+}
 
 
 //If the game-player's guess does not match the computer's guess, count it as a "loss"
