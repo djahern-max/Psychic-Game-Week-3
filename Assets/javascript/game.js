@@ -1,15 +1,13 @@
 window.onload=function(){
 
-
-// Create variables
+// Variables
 
 var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var guessesLeft = 9;
-var playersGuess = [];
 var wins = 0;
 var losses = 0;
 
-// The code below prompts the computer to gesss a letter within the "letters" array
+// Computer selects letter at random from the "letters" array
 
 updateLetterToGuess();
 
@@ -18,59 +16,35 @@ function updateLetterToGuess(){
   
 }
 
-// This display's the computer's guess on the page
- 
-document.getElementById("Computer's Guess").innerHTML = letterToGuess;
-
-// Create code that tracks the game player's guess
-
+// When user presses a key, an event is triggered
 
 document.onkeydown=function(event) {
 
 var key_press = String.fromCharCode(event.keyCode);
 
-
-document.getElementById("Player's Guess").innerHTML = key_press; 
-
-
-
-
-//Keep track of the game-player's guesses
-
-document.getElementById("guessesLeft").innerHTML = guessesLeft;
-
-
-//If the game-player's guess matches the computer's guess, count it as a "win"
-
+// The variable above is compared to the computer's guess.  If they are equal, the variable "wins" is updated.  If they are not equal, the variable "losses" is updated
 
 if (key_press===letterToGuess) {
 
     wins++;
     
-
 }
 
 else if (key_press!==letterToGuess) {
 
     losses++;
 
+}
+
+// This updates the HTML to dislplay the game results
+
+document.getElementById("Computer's Guess").innerHTML = letterToGuess;
+document.getElementById("Player's Guess").innerHTML = key_press; 
+document.getElementById("guessesLeft").innerHTML = guessesLeft;
 document.getElementById("wins").innerHTML = wins;
 document.getElementById("losses").innerHTML = losses;
 
-
 }
-
-}
-
-
-//If the game-player's guess does not match the computer's guess, count it as a "loss"
-
-
-//Keep track of guesses left
-
-//Keep track of guesses so far
-
-
 
 
 }
