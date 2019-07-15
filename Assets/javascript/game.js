@@ -28,7 +28,7 @@ document.getElementById("Computer's Guess").innerHTML = letterToGuess;
 document.onkeydown=function(event) {
 
 var key_press = String.fromCharCode(event.keyCode);
-
+guessesLeft--;
 
 document.getElementById("Player's Guess").innerHTML = key_press; 
 
