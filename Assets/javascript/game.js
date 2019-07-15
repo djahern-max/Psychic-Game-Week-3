@@ -7,14 +7,6 @@ var guessesLeft = 9;
 var wins = 0;
 var losses = 0;
 
-
-// Starts off the game with zero inputs for wins and losses and 9 guesses left.
-
-document.getElementById("guessesLeft").innerHTML = guessesLeft;
-document.getElementById("wins").innerHTML = wins;
-document.getElementById("losses").innerHTML = losses;
-
-
 // Computer selects letter at random from the "letters" array
 
 updateLetterToGuess();
@@ -22,7 +14,15 @@ updateLetterToGuess();
 function updateLetterToGuess(){
   letterToGuess=letters[Math.floor(Math.random()*letters.length)]
   
-}
+
+// Starts off the game with zero inputs for wins and losses and 9 guesses left.
+
+document.getElementById("guessesLeft").innerHTML = guessesLeft;
+document.getElementById("wins").innerHTML = wins;
+document.getElementById("losses").innerHTML = losses;
+document.getElementById("Computer's Guess").innerHTML = letterToGuess;
+
+
 
 // When user presses a key, an event is triggered
 
@@ -57,5 +57,6 @@ document.getElementById("losses").innerHTML = losses;
 
 }
 
+}
 
 }
