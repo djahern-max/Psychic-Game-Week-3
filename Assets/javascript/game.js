@@ -14,6 +14,7 @@ document.getElementById("guessesLeft").innerHTML = guessesLeft;
 document.getElementById("wins").innerHTML = wins;
 document.getElementById("losses").innerHTML = losses;
 
+
 // Computer selects letter at random from the "letters" array
 
 updateLetterToGuess();
@@ -35,16 +36,16 @@ guessesLeft--;
 if (key_press.toUpperCase()===letterToGuess) {
 
     wins++;
+    guessesLeft=9;
     
 }
 
-else if (key_press.toUpperCase()!==letterToGuess) {
+else if (guessesLeft===0) {
 
     losses++;
+    guessesLeft=9;
 
 }
-
-
 
 // This updates the HTML to dislplay the game results
 
