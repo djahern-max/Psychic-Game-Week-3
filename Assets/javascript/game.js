@@ -7,7 +7,7 @@ var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
 var guessesLeft = 9;
 var playersGuess = [];
 var wins = 0;
-
+var losses = 0;
 
 // The code below prompts the computer to gesss a letter within the "letters" array
 
@@ -43,17 +43,19 @@ document.getElementById("guessesLeft").innerHTML = guessesLeft;
 //If the game-player's guess matches the computer's guess, count it as a "win"
 
 
-if (key_press.toUpperCase()===letterToGuess) {
+if (key_press===letterToGuess) {
 
     wins++;
-    console.log(wins);
+    
 
 }
 
-else if (event!==letterToGuess) {
+else if (key_press!==letterToGuess) {
+
+    losses++;
 
 document.getElementById("wins").innerHTML = wins;
-
+document.getElementById("losses").innerHTML = losses;
 
 
 }
