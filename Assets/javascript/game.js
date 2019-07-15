@@ -21,7 +21,8 @@ function updateLetterToGuess(){
  
 document.getElementById("Computer's Guess").innerHTML = letterToGuess;
 
-// Create code that prompts the game-player to select a number
+// Create code that tracks the game player's guess
+
 
 document.onkeydown=function(){
 
