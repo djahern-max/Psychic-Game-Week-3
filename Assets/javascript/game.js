@@ -7,6 +7,13 @@ var guessesLeft = 9;
 var wins = 0;
 var losses = 0;
 
+
+// Starts off the game with zero inputs for wins and losses and 9 guesses left.
+
+document.getElementById("guessesLeft").innerHTML = guessesLeft;
+document.getElementById("wins").innerHTML = wins;
+document.getElementById("losses").innerHTML = losses;
+
 // Computer selects letter at random from the "letters" array
 
 updateLetterToGuess();
@@ -21,20 +28,23 @@ function updateLetterToGuess(){
 document.onkeydown=function(event) {
 
 var key_press = String.fromCharCode(event.keyCode);
+guessesLeft--;
 
 // The variable above is compared to the computer's guess.  If they are equal, the variable "wins" is updated.  If they are not equal, the variable "losses" is updated
 
-if (key_press===letterToGuess) {
+if (key_press.toUpperCase()===letterToGuess) {
 
     wins++;
     
 }
 
-else if (key_press!==letterToGuess) {
+else if (key_press.toUpperCase()!==letterToGuess) {
 
     losses++;
 
 }
+
+
 
 // This updates the HTML to dislplay the game results
 
